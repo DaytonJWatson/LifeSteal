@@ -12,7 +12,6 @@ public class Lifesteal extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		instance = this;
-		
 		Commands.setup();
 		Config.setup();
 		Events.setup();

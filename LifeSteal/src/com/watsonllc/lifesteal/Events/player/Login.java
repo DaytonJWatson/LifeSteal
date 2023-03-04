@@ -17,7 +17,7 @@ public class Login implements Listener {
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onPlayerLogin(PlayerLoginEvent event) {
-		Data.reload();
+		Data.reload(); // reloads data to check latest ban time.
 		Player player = event.getPlayer();
 		LifestealManager ls = new LifestealManager(player);
 		String banDate = null;

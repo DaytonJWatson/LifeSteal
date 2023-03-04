@@ -17,6 +17,7 @@ public class Death implements Listener {
 		
 		if(victim != null) {
 			LifestealManager lsVictim = new LifestealManager(victim);
+			lsVictim.updatePlaytime();
 			lsVictim.addDeath();
 			lsVictim.takeLife();
 			

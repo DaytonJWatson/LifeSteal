@@ -21,7 +21,8 @@ public class LifestealManager {
 
 	public LifestealManager(Player player) {
 		this.player = player;
-		this.dataPath = "data." + player.getUniqueId().toString();
+		if (player != null)
+			this.dataPath = "data." + player.getUniqueId().toString();
 	}
 
 	public void create() {
@@ -113,8 +114,10 @@ public class LifestealManager {
 		if (banned == true) {
 			Date banEndTime = new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000);
 			Data.set(dataPath + ".unbanDate", banEndTime);
-			player.kickPlayer(Utils.chat("&c\"Death is a debt we all must pay.\" - Euripides" + "\n&7come back in 24 hours"));
-		} else if (banned == false) Data.set(dataPath + ".unbanDate", null);
+			player.kickPlayer(
+					Utils.chat("&c\"Death is a debt we all must pay.\" - Euripides" + "\n&7come back in 24 hours"));
+		} else if (banned == false)
+			Data.set(dataPath + ".unbanDate", null);
 		Data.setBoolean(dataPath + ".banned", banned);
 	}
 
