@@ -1,0 +1,7 @@
+name: Lifesteal
+author: WatsonLLC
+description: Lifesteal plugin
+version: 0.0.1
+api-version: 1.19
+main: com.watsonllc.lifesteal.Lifesteal
+commands:
